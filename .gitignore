@@ -6,3 +6,5 @@ target
 /project/target
 
 algorithm.zip
+/.idea/
+/lib_managed/
