@@ -18,3 +18,9 @@ addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.5.1")
  * generate static analysis reports to target/scala-2.11/scapegoat-report: sbt scapegoat
  */
 addSbtPlugin("com.sksamuel.scapegoat" %% "sbt-scapegoat" % "1.0.9")
+
+/*
+ * https://github.com/mwz/sbt-sonar
+ * run sonar-scanner launcher to analyse a Scala project with SonarQube
+ */
+addSbtPlugin("com.github.mwz" % "sbt-sonar" % "1.6.0")

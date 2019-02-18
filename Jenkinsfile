@@ -54,6 +54,7 @@ pipeline {
             steps {
                 unstash name: 'Checkout'
                 sh 'sbt coverage test coverageReport'
+                stash name: 'Validate'
             }
             post {
                 always {
@@ -75,6 +76,15 @@ pipeline {
                 }
                 failure {
                     colourText("warn", "Stage: ${env.STAGE_NAME} failed!")
+                }
+            }
+        }
+        stage('SonarQube Analysis') {
+            agent { label "build.${agentSbtVersion}" }
+            steps {
+                unstash name: 'Validate'
+                withSonarQubeEnv('SonarQube') {
+                    sh 'sbt sonarScan'
                 }
             }
         }
