@@ -43,4 +43,4 @@ fi
 
 # Install SBT
 apt-get install -y wget
-wget http://dl.bintray.com/sbt/debian/sbt-0.13.9.deb -O /tmp/sbt-0.13.9.deb && dpkg -i /tmp/sbt-0.13.9.deb
+wget http://dl.bintray.com/sbt/debian/sbt-1.2.4.deb -O /tmp/sbt-1.2.4.deb && dpkg -i /tmp/sbt-1.2.4.deb
