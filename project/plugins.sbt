@@ -3,14 +3,15 @@
  * show ascii dependency tree: sbt dependencyTree
  * show flat list of transitive dependencies: sbt dependencyList
  */
-addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.9.2")
+//addSbtPlugin("net.virtual-void" % "sbt-dependency-graph" % "0.9.2")
 
 /*
  * https://github.com/scoverage/sbt-scoverage
  * run tests with coverage: sbt clean coverage test
  * generate coverage reports to target/scoverage-report: sbt coverageReport
  */
-addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.5.1")
+//addSbtPlugin("org.scoverage" % "sbt-scoverage" % "1.5.1")
+
 
 /*
  * https://github.com/sksamuel/sbt-scapegoat
