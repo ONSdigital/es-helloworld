@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+cd ONSdigital/es-helloworld
+git remote add algo https://git.algorithmia.com/git/awharris/helloworld.git
+git pull algo master
+git push algo master
