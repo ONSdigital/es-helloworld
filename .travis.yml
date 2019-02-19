@@ -8,7 +8,6 @@ jdk:
   - oraclejdk8
 deploy:
   provider: script
-  skip-cleanup: true
   script: deploy
   on:
     branch: master
