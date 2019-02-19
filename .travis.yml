@@ -9,5 +9,3 @@ jdk:
 deploy:
   provider: script
   script: deploy
-#  on:
- #   branch: master
