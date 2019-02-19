@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+git clone --depth=50 --branch=master https://github.com/ONSdigital/es-helloworld.git ONSdigital/es-helloworld
 cd ONSdigital/es-helloworld
 git remote add -v algo https://git.algorithmia.com/git/awharris/helloworld.git
 git pull -v algo master
