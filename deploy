@@ -5,7 +5,7 @@ cd ONSdigital/es-helloworld
 echo "In project directory"
 git checkout master
 echo "Checked out Github master branch"
-git remote add algo https://git.algorithmia.com/git/awharris/helloworld.git
+git remote add algo https://${algo_user}:${algo_password}@git.algorithmia.com/git/awharris/helloworld.git
 echo "Added remote to Algorithmia Git repository"
 git pull algo master
 echo "Pulled Algorithmia master branch"
