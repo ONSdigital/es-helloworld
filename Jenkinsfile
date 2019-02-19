@@ -10,6 +10,7 @@ pipeline {
     }
     environment {
         SVC_NAME = "es-helloworld"
+        TRAVIC_CI_URL = "https://travis-ci.com/ONSdigital/es-helloworld"
     }
     options {
         skipDefaultCheckout()
@@ -70,6 +71,46 @@ pipeline {
                             onlyStable: false,
                             zoomCoverageChart: false
                 }
+                success {
+                    colourText("info", "Stage: ${env.STAGE_NAME} successful!")
+                }
+                failure {
+                    colourText("warn", "Stage: ${env.STAGE_NAME} failed!")
+                }
+            }
+        }
+
+        stage('Deploy') {
+            agent { label 'deploy.cf' }
+            when {
+                branch "master"
+                // evaluate the when condition before entering this stage's agent, if any
+                beforeAgent true
+            }
+            steps {
+                colourText("info", "Currently deployed to Algorthmia via ${env.TRAVIC_CI_URL}")
+            }
+            post {
+                success {
+                    colourText("info", "Stage: ${env.STAGE_NAME} successful!")
+                }
+                failure {
+                    colourText("warn", "Stage: ${env.STAGE_NAME} failed!")
+                }
+            }
+        }
+
+        stage('Verify') {
+            agent { label 'deploy.cf' }
+            when {
+                branch "master"
+                // evaluate the when condition before entering this stage's agent, if any
+                beforeAgent true
+            }
+            steps {
+                colourText("info", "Currently verfied in Algorthmia via ${env.TRAVIC_CI_URL}")
+            }
+            post {
                 success {
                     colourText("info", "Stage: ${env.STAGE_NAME} successful!")
                 }
