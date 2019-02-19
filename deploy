@@ -1,7 +1,12 @@
 #!/usr/bin/env bash
 
 cd ONSdigital/es-helloworld
+ls
 git remote add -v algo https://git.algorithmia.com/git/awharris/helloworld.git
+echo "Added remote to Algorithmia Git repository"
 git checkout master
+echo "Checked out Github master branch"
 git pull algo master
+echo "Pulled Algorithmia master branch"
 git push algo master
+echo "Pushed changes to Algorithmia master branch"
