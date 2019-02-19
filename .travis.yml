@@ -9,3 +9,5 @@ jdk:
 deploy:
   provider: script
   script: deploy
+  on:
+    branch: feature/travis-deploy
