@@ -7,7 +7,6 @@ script:
 jdk:
   - oraclejdk8
 deploy:
-  skip_cleanup: true
   provider: script
   script: deploy
   on:
