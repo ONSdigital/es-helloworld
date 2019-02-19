@@ -8,6 +8,6 @@ jdk:
   - oraclejdk8
 deploy:
   provider: script
-  script: deploy
+  script: bash deploy
   on:
     branch: master
