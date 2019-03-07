@@ -1,11 +1,18 @@
 #!/usr/bin/env bash
 
+# exit when any command fails
+set -e
+
 echo "Starting deploy script..."
+
+echo "Checking out Github master branch"
 git checkout master
-echo "Checked out Github master branch"
+
+echo "Adding remote to Algorithmia Git repository"
 git remote add algo https://${algo_user}:${algo_password}@git.algpoc.com/git/harria1/helloworld.git
-echo "Added remote to Algorithmia Git repository"
-git pull algo master --allow-unrelated-histories
-echo "Pulled Algorithmia master branch"
+
+echo "Pulling Algorithmia master branch"
+git pull algo master
+
+echo "Pushing changes to Algorithmia master branch"
 git push algo master
-echo "Pushed changes to Algorithmia master branch"
