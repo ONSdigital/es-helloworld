@@ -9,13 +9,13 @@ jdk:
 deploy:
   - provider: script
     skip_cleanup: true
-    script: bash scripts/deploy -a $algo_name -u $algo_user -p $algo_password
+    script: bash scripts/deploy.sh -a $algo_name -u $algo_user -p $algo_password
     on:
       branch: master
       tags: false
   - provider: script
     skip_cleanup: true
-    script: bash scripts/publish -a $algo_name -k $algo_key -t $TRAVIS_TAG -g $TRAVIS_REPO_SLUG
+    script: bash scripts/publish.sh -a $algo_name -k $algo_key -t $TRAVIS_TAG -g $TRAVIS_REPO_SLUG
     on:
       branch: master
       tags: true
