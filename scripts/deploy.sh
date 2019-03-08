@@ -4,7 +4,9 @@
 set -e
 
 owner="ons"
-giturl="git.algpoc.com/git"
+giturl=
+#giturl="git.algpoc.com/git" #ons
+giturl="git.algorithmia.com/git" #public
 
 while getopts "a:k:v:o:u:" option; do
     case "${option}" in
