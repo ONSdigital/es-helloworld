@@ -8,7 +8,7 @@ giturl=
 #giturl="git.algpoc.com/git" #ons
 giturl="git.algorithmia.com/git" #public
 
-while getopts "a:k:v:o:u:" option; do
+while getopts "a:u:p:o:g" option; do
     case "${option}" in
     a) algorithm=${OPTARG};;
     u) username=${OPTARG};;
