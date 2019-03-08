@@ -3,7 +3,7 @@
 # exit when any command fails
 set -e
 
-owner="ons"
+owner="awharris"
 #giturl="git.algpoc.com/git" #ons
 giturl="git.algorithmia.com/git" #public
 
