@@ -7,8 +7,15 @@ script:
 jdk:
   - oraclejdk8
 deploy:
-  skip_cleanup: true
-  provider: script
-  script: bash deploy
-  on:
-    branch: master
+  - provider: script
+    skip_cleanup: true
+    script: scripts/deploy -a ${algo_name} -u ${algo_user} -p ${algo_password}
+    on:
+      branch: master
+      tags: false
+  - provider: script
+    skip_cleanup: true
+    script: scripts/publish -a ${algo_name} -k ${algo_key} -t ${TRAVIS_TAG} -g ${TRAVIS_REPO_SLUG}
+    on:
+      branch: master
+      tags: true
