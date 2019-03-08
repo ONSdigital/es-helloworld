@@ -4,7 +4,6 @@
 set -e
 
 owner="ons"
-giturl=
 #giturl="git.algpoc.com/git" #ons
 giturl="git.algorithmia.com/git" #public
 
