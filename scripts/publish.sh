@@ -4,7 +4,7 @@
 set -e
 
 versionType="revision"
-owner="ons"
+owner="awharris"
 github_tag="n/a"
 #url="https://api.algpoc.com/v1/algorithms" #ons
 url="https://api.algorithmia.com/v1/algorithms" #public
