@@ -29,7 +29,7 @@ echo
 curl -X POST "${url}/${owner}/${algorithm}/versions" \
   -H "Authorization: Simple ${authKey}" \
   -H "Content-Type: application/json" \
-  --data '{4
+  --data '{
     "version_info": {
         "version_type": "'${versionType}'",
         "release_notes": "See GitHub https://github.com/'${github_repo}'/releases/tag/'${github_tag}'"
